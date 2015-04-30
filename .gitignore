@@ -1,0 +1,9 @@
+*.pyc
+build/
+dist/
+.cache/
+.coverage
+*.egg*
+.env/
+env/
+.idea/
