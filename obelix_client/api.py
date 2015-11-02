@@ -175,11 +175,15 @@ class Obelix(object):
         """
         # if 'uri' in user_info and '.pdf' in user_info['uri'].lower():
         if 'uri' in user_info and 'subformat=' not in user_info['uri'].lower():
-            p = re.compile(r'\.\D+')
-            file_type = p.search(user_info['uri']).group()[1:]
-            self.log_page_view(user_info, recid,
-                               req_type="events.downloads",
-                               file_format=file_type)
+            try:
+                file_type = re.search(r'\.\D+', user_info['uri']).group()[1:]
+            except AttributeError:
+                # No file type, i.e. uri = '/record/394122/files/?'
+                pass
+            else:
+                self.log_page_view(user_info, recid,
+                                   req_type="events.downloads",
+                                   file_format=file_type)
 
     def log_page_view(self, user_info, recid, req_type="events.pageviews",
                       file_format="view"):
