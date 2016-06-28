@@ -22,7 +22,7 @@
 Links
 -----
 
-* `website <http://invenio-software.org/>`_
+* `website <http://inveniosoftware.org/>`_
 * TODO: `documentation <http://********.readthedocs.org/en/latest/>`_
 * `development <https://github.com/inveniosoftware/obelix-client>`_
 """

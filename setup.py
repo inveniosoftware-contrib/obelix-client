@@ -86,7 +86,7 @@ setup(
     url='https://github.com/inveniosoftware/obelix-client',
     license='GPLv2',
     author='CERN',
-    author_email='info@invenio-software.org',
+    author_email='info@inveniosoftware.org',
     long_description=__doc__,
     packages=['obelix_client'],
     include_package_data=True,
